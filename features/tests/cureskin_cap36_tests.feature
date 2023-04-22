@@ -1,6 +1,12 @@
 # Created by babao at 4/19/2023
-Feature: # Enter feature name here
-  # Enter feature description here
+Feature: CureSkin Website Search
 
-  Scenario: # Enter scenario name here
-    # Enter steps here
+Scenario: User can access search
+Given Open CureSkin page
+ When Click on the search field
+ Then Input text SPF
+ Then Click to search
+ Then Verify the results have spf
+
+
+
