@@ -3,7 +3,7 @@ Feature: CureSkin Website Search
 
 Scenario: User can access search
 Given Open CureSkin page
- When Click on the search field
+ When Click on the search icon
  Then Input text SPF
  Then Click to search
  Then Verify the results have spf

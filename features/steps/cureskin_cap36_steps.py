@@ -11,9 +11,9 @@ from selenium.webdriver.support.ui import Select
 def open_cureskin_page(context):
     context.app.main_page.open_cureskin()
 
-@when('Click on the search field')
-def search_field(context):
-    context.app.header_page.search_field()
+@when('Click on the search icon')
+def search_icon(context):
+    context.app.header_page.search_icon()
 
 
 @then('Input text {text}')

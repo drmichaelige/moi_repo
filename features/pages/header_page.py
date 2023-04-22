@@ -11,12 +11,12 @@ class HeaderPage(Page):
     SEARCH_INPUT = (By.ID, 'Search-In-Modal')
     SEND_SEARCH =(By.CSS_SELECTOR, "button[type ='submit']")
     POPUP_CLOSE = (By.CSS_SELECTOR,'.popup-close')
-    def search_field(self):
+    def search_icon(self):
         self.click(*self.SEARCH_ICON)
         # time.sleep(3)
 
-    def input_search(self, text):
-        self.input_text(text, *self.SEARCH_INPUT)
+    # def input_search(self, text):
+    #     self.input_text(text, *self.SEARCH_INPUT)
 
     def product_search(self, product):
         self.input_text(product, *self.SEARCH_INPUT)
