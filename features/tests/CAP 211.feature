@@ -8,4 +8,5 @@ Given Open CureSkin page
  Then Click to search
  Then Verify no results found
 
-#
+
+

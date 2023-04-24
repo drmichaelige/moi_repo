@@ -8,7 +8,7 @@ from pages.base_page import Page
 from pages.header_page import HeaderPage
 from pages.main_page import MainPage
 from pages.search_page import SearchPage
-
+from pages.cart_page import CartPage
 
 class Application:
     def __init__(self, driver):
@@ -16,3 +16,4 @@ class Application:
         self.main_page = MainPage(self.driver)
         self.header_page = HeaderPage(self.driver)
         self.search_page = SearchPage(self.driver)
+        self.cart_page = CartPage(self.driver)

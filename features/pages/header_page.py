@@ -11,6 +11,11 @@ class HeaderPage(Page):
     SEARCH_INPUT = (By.ID, 'Search-In-Modal')
     SEND_SEARCH =(By.CSS_SELECTOR, "button[type ='submit']")
     POPUP_CLOSE = (By.CSS_SELECTOR,'.popup-close')
+    # SHOP_BY_PRODUCT = (By.CSS_SELECTOR,"//a[contains(text(),'Shop by Product')]")
+    CLICK_A_PRODUCT = (By.CSS_SELECTOR,"a[href='/products/sunscreen-spf-30']")
+
+
+
     def search_icon(self):
         self.click(*self.SEARCH_ICON)
         # time.sleep(3)
@@ -26,6 +31,11 @@ class HeaderPage(Page):
     def click_to_search(self):
         self.click(*self.SEND_SEARCH)
         # time.sleep(2)
+
+    def click_a_product(self):
+        self.click(*self.CLICK_A_PRODUCT)
+
+
 
     # def input_text(self):
     #     search_text = self.find_element(*self.SEARCH_INPUT)
