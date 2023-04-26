@@ -11,9 +11,9 @@ class HeaderPage(Page):
     SEARCH_INPUT = (By.ID, 'Search-In-Modal')
     SEND_SEARCH =(By.CSS_SELECTOR, "button[type ='submit']")
     POPUP_CLOSE = (By.CSS_SELECTOR,'.popup-close')
-    # SHOP_BY_PRODUCT = (By.CSS_SELECTOR,"//a[contains(text(),'Shop by Product')]")
+    # SHOP_BY_PRODUCT = (By.XPATH,"//a[contains(text(),'Shop by Product')]")
     CLICK_A_PRODUCT = (By.CSS_SELECTOR,"a[href='/products/sunscreen-spf-30']")
-
+    SHOP_ALL = (By.XPATH,"//span[contains(text(),'Shop All')]")
 
 
     def search_icon(self):
@@ -36,6 +36,8 @@ class HeaderPage(Page):
         self.click(*self.CLICK_A_PRODUCT)
 
 
+    def click_shop_all(self):
+        self.click(*self.SHOP_ALL)
 
     # def input_text(self):
     #     search_text = self.find_element(*self.SEARCH_INPUT)
@@ -43,12 +45,12 @@ class HeaderPage(Page):
     #     close_popup = self.find_element(*self.POPUP_CLOSE)
     #
     #
-    #     action = ActionChains(self.driver)
-    #     action.click(close_popup).perform()
-    #     time.sleep(3)
-    #     action.send_keys_to_element(click_search).perform()
-    #     time.sleep(3)
-    #     action.click(search_text).perform()
+        # action = ActionChains(self.driver)
+        # action.click(close_popup).perform()
+        # time.sleep(3)
+        # action.send_keys_to_element(click_search).perform()
+        # time.sleep(3)
+        #   action.click(search_text).perform()
     #     time.sleep(3)
     #
     #
