@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 
 from app.application import Application
@@ -9,10 +10,13 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    service = Service('./chromedriver.exe')
-    context.driver = webdriver.Chrome(service=service)
+    # service = Service('./chromedriver.exe')
+    # context.driver = webdriver.Chrome(service=service)
     # context.browser = webdriver.Safari()
-    # context.browser = webdriver.Firefox()
+    service = Service('./geckodriver.exe')
+    context.browser = webdriver.Firefox(service=service)
+    # service = Service('./edgedriver.exe')
+    # context.browser = webdriver.Edge(service=service)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
@@ -22,7 +26,7 @@ def browser_init(context):
     # options = webdriver.ChromeOptions
     # options.add_argument('headless')
     # context.driver = webdriver.Chrome(chrome_options=options)
-    # chroptions = webdriver.ChromeOptions()
+    # chromeoptions = webdriver.ChromeOptions()
 
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)

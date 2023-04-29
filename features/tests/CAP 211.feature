@@ -9,4 +9,3 @@ Given Open CureSkin page
  Then Verify no results found
 
 
-

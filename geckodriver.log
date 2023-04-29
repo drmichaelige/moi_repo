@@ -1,0 +1,98 @@
+1682710635407	geckodriver	INFO	Listening on 127.0.0.1:52964
+1682710638618	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52965" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilelezYOv"
+1682710681513	geckodriver	INFO	Listening on 127.0.0.1:53291
+1682710684581	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53292" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilebBqYra"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682710685331	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682710685338	Marionette	INFO	Listening on port 53340
+Read port: 53340
+WebDriver BiDi listening on ws://127.0.0.1:53292
+1682710685830	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilebBqYra\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:53292/devtools/browser/0754527c-3c1f-44df-a132-bf165fec16b5
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1682737327526	Marionette	INFO	Stopped listening on port 53340
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilesfTWGM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682710736806	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682710736813	Marionette	INFO	Listening on port 53586
+Read port: 53586
+WebDriver BiDi listening on ws://127.0.0.1:53550
+1682710737056	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilesfTWGM\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:53550/devtools/browser/5a49712f-206e-41a1-9bd5-181fb820cdb2
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1682737144090	Marionette	INFO	Stopped listening on port 53586
+Dynamically enable window occlusion 1
+console.error: (new AbortError("IndexedDB: main/url-classifier-skip-urls list() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.jsm", 18))
+"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682728662867	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682728662875	Marionette	INFO	Listening on port 60789
+WebDriver BiDi listening on ws://127.0.0.1:60782
+Read port: 60789
+1682728663701	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilenP40Gy\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:60782/devtools/browser/cbfe9f2d-5f12-493e-8313-a6cb0747d42e
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1682737143308	Marionette	INFO	Stopped listening on port 60789
+Dynamically enable window occlusion 1
+efox.exe" "--marionette" "--remote-debugging-port" "61148" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofile58Flrx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682729060092	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682729060099	Marionette	INFO	Listening on port 61161
+Read port: 61161
+WebDriver BiDi listening on ws://127.0.0.1:61148
+1682729060248	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofile58Flrx\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:61148/devtools/browser/9c3edfa1-7c39-418d-b8aa-956202c5c067
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1682737142305	Marionette	INFO	Stopped listening on port 61161
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1682737142411	WebDriver BiDi	ERROR	Failed to stop protocol: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.sys.mjs :: allowAllCerts.disable :: line 51"  data: no] Stack trace: allowAllCerts.disable()@cert.sys.mjs:51
+destroy()@Session.sys.mjs:207
+deleteSession()@WebDriverBiDi.sys.mjs:142
+stop()@WebDriverBiDi.sys.mjs:230
+1682794035963	geckodriver	INFO	Listening on 127.0.0.1:52858
+1682794038992	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52859" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilem9aXW8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682794040461	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682794040475	Marionette	INFO	Listening on port 52886
+Read port: 52886
+WebDriver BiDi listening on ws://127.0.0.1:52859
+1682794042124	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofilem9aXW8\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:52859/devtools/browser/561d6bce-0c35-4f81-9b2e-0f4ce14c4af3
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:53279
+1682794143406	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53280" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofileE051LL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682794143850	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682794143857	Marionette	INFO	Listening on port 53347
+WebDriver BiDi listening on ws://127.0.0.1:53280
+Read port: 53347
+1682794144514	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\babao\\AppData\\Local\\Temp\\rust_mozprofileE051LL\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:53280/devtools/browser/1800077b-d237-4351-b088-80d957b558b7
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
