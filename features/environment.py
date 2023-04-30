@@ -14,18 +14,18 @@ def browser_init(context):
     :param context: Behave context
     """
 
-    # ############# FIREFOX #####################
-    # options = FirefoxOptions()
+    ############# FIREFOX #####################
+    options = FirefoxOptions()
     # options.headless = True
-    # context.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
-    # #############################################
+    context.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
+    #############################################
     #
-    ############## CHROME ######################
-    options = ChromeOptions()
-    options.headless = True
-    options.add_argument("--window-size=1920,1080")
-    context.driver = webdriver.Chrome(options=options, executable_path=ChromeDriverManager().install())
-    ############################################
+    # ############## CHROME ######################
+    # options = ChromeOptions()
+    # options.headless = True
+    # options.add_argument("--window-size=1920,1080")
+    # context.driver = webdriver.Chrome(options=options, executable_path=ChromeDriverManager().install())
+    # ############################################
 
 
 
