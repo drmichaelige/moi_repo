@@ -35,23 +35,6 @@ def browser_init(context):
     context.app = Application(context.driver)
 
 
-
-    # options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")
-    # context.driver = webdriver.Chrome(chrome_options=options)
-    # chromeOptions = webdriver.ChromeOptions()
-
-
-
-  # context.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-    #context.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
-
-    # service = Service('./chromedriver.exe')
-    # context.driver = webdriver.Chrome(service=service)
-    # context.browser = webdriver.Safari()
-    # service = Service('./geckodriver.exe')
-    # context.browser = webdriver.Firefox(service=service)
-
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
     browser_init(context)

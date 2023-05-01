@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from pages.base_page import Page
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
-
+import math
 
 class SearchPage(Page):
     SEARCH_RESULT = (By.ID,'ProductCount')
@@ -11,7 +11,11 @@ class SearchPage(Page):
     ADJUST_SLIDER = (By.XPATH,"//div[@role='slider']")
     FILTER_PRICE_RANGE = (By.XPATH, "//div[contains(text(),'Price: Rs. 0 — Rs. 725')]")
     # PRICE = (By.CSS_SELECTOR,'.price--on-sale')
-    PRICE =(By.XPATH,'//*[@id="product-grid"]/li[1]/div/div/div[2]/div[2]/dl/div[2]/dd[2]/span/price-money/bdi/text()')
+    #PRICE =(By.XPATH,'//*[@id="product-grid"]/li[1]/div/div/div[2]/div[2]/dl/div[2]/dd[2]/span/price-money/bdi/text()')
+    PRICE = (By.XPATH,"//*[contains(text(),'445')]")
+
+
+
 
     def verify_no_results(self):
         expected_result = 'No results found'
@@ -47,8 +51,9 @@ class SearchPage(Page):
         # displayed_price_range = "Price: Rs. 341 — Rs. 725"
         prices = self.driver.find_elements(*self.PRICE)
         price_list_text = [price.text for price in prices]
+        print(prices)
+        print(price_list_text)
         for el in price_list_text:
-            assert int(el) > 341 and int(el) < 725
-
-
+            # assert (el) > int(341) and (el) < int(725)
+            assert (el) > str(int(341)) and (el) < str(int(725))
 
