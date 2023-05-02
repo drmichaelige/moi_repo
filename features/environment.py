@@ -9,25 +9,39 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 
-def browser_init(context):
+def browser_init(context, test_name):
     """
     :param context: Behave context
     """
 
-    ############# FIREFOX #####################
-    options = FirefoxOptions()
-    # options.headless = True
-    context.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
-    #############################################
-    #
+    # ############# FIREFOX #####################
+    # options = FirefoxOptions()
+    # # options.headless = True
+    # context.driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
+    # #############################################
+
     # ############## CHROME ######################
     # options = ChromeOptions()
-    # options.headless = True
+    # # options.headless = True
     # options.add_argument("--window-size=1920,1080")
     # context.driver = webdriver.Chrome(options=options, executable_path=ChromeDriverManager().install())
     # ############################################
 
+    ############### BROWSERSTACK  #############################
+    desired_cap = {
+        'browser': 'chrome',
+        'os_version': '10',
+        'os' : 'Windows',
+        'name':test_name
+        }
+    bs_user = 'jdee_4nTx8Y'
+    bs_key = 'ypYgrBRy8L8hVLrBwtfK'
+    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    # userName: jdee_4nTx8Y
+    # accessKey: ypYgrBRy8L8hVLrBwtfK
 
+    ###########################################################
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
@@ -37,7 +51,7 @@ def browser_init(context):
 
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
-    browser_init(context)
+    browser_init(context, scenario.name)
 
 
 def before_step(context, step):
