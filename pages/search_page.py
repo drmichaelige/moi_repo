@@ -13,7 +13,7 @@ class SearchPage(Page):
     FILTER_PRICE_RANGE = (By.XPATH, "//div[contains(text(),'Price: Rs. 0 — Rs. 725')]")
     # PRICE = (By.CSS_SELECTOR,'.price--on-sale')
     #PRICE =(By.XPATH,'//*[@id="product-grid"]/li[1]/div/div/div[2]/div[2]/dl/div[2]/dd[2]/span/price-money/bdi/text()')
-    PRICE = (By.XPATH,"//*[contains(text(),'445')]")
+    PRICE = (By.XPATH, "//ul[@id='product-grid']/li//span[@class='price-item price-item--sale']//bdi")
     #PRICE2 = (By.XPATH,"//body[1]/div[2]/div[3]/main[1]/section[2]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[2]/div[2]/dl[1]/div[2]/dd[2]/span[1]/price-money[1]/bdi[1]")
 
 
@@ -51,10 +51,8 @@ class SearchPage(Page):
     def verify_price_filter(self):
         prices = self.driver.find_elements(*self.PRICE)
         price_list_text = [price.text for price in prices]
-
-        print(prices)
         print(price_list_text)
         for el in price_list_text:
-            # assert int(el) > 341 and int(el) < 725)
-            assert (el) > str(int(341)) or (el) < str(int(725))
+            assert int(el) > 341 and int(el) < 725
+            # assert (el) > str(int(341)) or (el) < str(int(725))
 

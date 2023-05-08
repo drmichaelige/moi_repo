@@ -26,22 +26,30 @@ def browser_init(context, test_name):
     # options.add_argument("--window-size=1920,1080")
     # context.driver = webdriver.Chrome(options=options, executable_path=ChromeDriverManager().install())
     # ############################################
+    #
+    # ############### BROWSERSTACK  #############################
+    # desired_cap = {
+    #     'browser': 'chrome',
+    #     'os_version': '10',
+    #     'os' : 'Windows',
+    #     'name':test_name
+    #     }
+    # bs_user = 'jdee_4nTx8Y'
+    # bs_key = 'ypYgrBRy8L8hVLrBwtfK'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    # context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    # # userName: jdee_4nTx8Y
+    # # accessKey: ypYgrBRy8L8hVLrBwtfK
+    #
+    # ###########################################################
 
-    ############### BROWSERSTACK  #############################
-    desired_cap = {
-        'browser': 'chrome',
-        'os_version': '10',
-        'os' : 'Windows',
-        'name':test_name
-        }
-    bs_user = 'jdee_4nTx8Y'
-    bs_key = 'ypYgrBRy8L8hVLrBwtfK'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
-    # userName: jdee_4nTx8Y
-    # accessKey: ypYgrBRy8L8hVLrBwtfK
+    mobile_emulation = {"deviceName": "iPhone 12 Pro"}
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+    context.driver = webdriver.Chrome(options=chrome_options)
 
-    ###########################################################
+
+
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)

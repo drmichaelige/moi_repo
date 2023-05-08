@@ -8,9 +8,14 @@ class Page:
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
         self.cureskin_url = 'https://shop.cureskin.com/'
-
+        self.godaddy_url = ' https://www.godaddy.com/'
     def open_cureskin_page(self, page_address=''):
         self.driver.get(f'{self.cureskin_url}{page_address}')
+
+
+    def open_godaddy_page(self, page_address=''):
+        self.driver.get(f'{self.godaddy_url}{page_address}')
+
 
     def find_element(self, locator):
         self.driver.find_element(*locator)

@@ -14,8 +14,8 @@ class HeaderPage(Page):
     # SHOP_BY_PRODUCT = (By.XPATH,"//a[contains(text(),'Shop by Product')]")
     CLICK_A_PRODUCT = (By.CSS_SELECTOR,"a[href='/products/sunscreen-spf-30']")
     SHOP_ALL = (By.XPATH,"//span[contains(text(),'Shop All')]")
-
-
+    GODADDY_PAGE_TITLE = (By.CSS_SELECTOR,'#header .l16jx60o')
+    PAGE_TITLE_SOURCE = (By.CSS_SELECTOR, '.line-content')
     def search_icon(self):
         self.wait_for_element_and_click(*self.POPUP_CLOSE)
         time.sleep(2)
@@ -40,6 +40,46 @@ class HeaderPage(Page):
 
     def click_shop_all(self):
         self.click(*self.SHOP_ALL)
+
+
+    def godaddy_title_page(self):
+        title_page = self.driver.title
+        print(title_page)
+        #print(str(godaddy_title_page))
+
+    def godaddy_page_url(self):
+        current_url = self.driver.current_url
+        print(current_url)
+
+
+    def validate_title_page(self):
+        title_page = self.driver.title
+        expected_text = "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy"
+        print('Title page:' + title_page)
+        print('Expected text:' + expected_text)
+        assert  title_page == expected_text, f'Title page not validated'
+
+    def validate_current_url(self):
+        current_url = self.driver.current_url
+        expected_url = 'https://www.godaddy.com/'
+        print('Current Url:' + current_url)
+        print('Expected_url:' + expected_url)
+        assert current_url==expected_url, f'Expected URL is not Current URL '
+
+    def get_page_source(self):
+        page_source = self.driver.get('view-source:https://www.godaddy.com/')
+        page_source_url = self.driver.current_url
+        print(page_source_url)
+       # page_source = self.driver.page_source
+
+       # print(page_source)
+
+    def page_title_source(self):
+        page_title_source = self.driver.find_elements(*self.PAGE_TITLE_SOURCE)[14].text
+        original_page_title = "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy"
+        print(page_title_source[7:73])
+        print(original_page_title)
+        assert original_page_title==page_title_source[7:73], f'Page title not present in page source'
 
     # def input_text(self):
     #     search_text = self.find_element(*self.SEARCH_INPUT)
